@@ -1,0 +1,4 @@
+#/bin/sh
+set -e
+dpkg-divert --add --package quickrouter --rename --divert /etc/dnsmasq.conf.default /etc/dnsmasq.conf
+cat /etc/resolv.conf > /etc/resolv.conf.old

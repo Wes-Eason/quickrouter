@@ -1,0 +1,7 @@
+#/bin/sh
+set -e
+dpkg-divert --package quickrouter --remove --rename --divert /etc/dnsmasq.conf.default /etc/dnsmasq.conf
+
+[ -e /etc/resolv.conf.old ] && mv /etc/resolv.conf.old /etc/resolv.conf
+
+service dnsmasq reload || echo "" > /dev/null

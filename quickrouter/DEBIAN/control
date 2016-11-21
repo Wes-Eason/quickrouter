@@ -1,0 +1,9 @@
+Package: quickrouter
+Version: 0.1-4
+Section: base
+Priority: optional
+Architecture: all
+Depends: dnsmasq (>= 2.72)
+Maintainer: Wes Eason <whandi33@gmail.com>
+Description: Configures dnsmasq to act as a caching DNS server and a DHCP
+ server.
